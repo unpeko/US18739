@@ -54,20 +54,18 @@ if name.isalpha():
   print()
 
 # menu yes_no (sequnce 2)
-greeting = ("{v}, would you like to see our menu? ")
-userinput = yes_no(greeting.format(v=name))
-print()
+greeting = "{}, would you like to see our menu? "
+userinput = input(greeting.format(name))
 
-if userinput == "yes":
-  menu = (
-    "{v} what would you like to order? "  
-  )
-  (menu.format(v=name))
-
-if userinput == "No":
-  print(
-    'Thank you {v} for visiting us at Fraser High School Canteen.'.format(
-      v=name))
+if userinput.lower() == "yes":
+    menu = "{}, what would you like to order? ".format(name)
+    print(menu)
+elif userinput.lower() == "no":
+    print('Thank you {} for visiting us at Fraser High School Canteen.'.format(name))
+    exit()
+else:
+    print("Please answer with 'yes' or 'no'.")
+  
   #sequence 3 
 
 menuList = 'The Pie is worth $4.50 and The Burger is worth $7.89, {v} what would you like to order, either a Pie or a Burger? '
