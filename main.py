@@ -42,7 +42,7 @@ name = input("What is your name? ")
 print()
 
 # name checker (secqunce 1)
-if name.isalpha() == False:
+while name.isalpha() == False:
   print(
     "Sorry, we really need to know your name to help us process this order.")
   name = input("What is your name? ")
@@ -59,14 +59,25 @@ userinput = yes_no(greeting.format(v=name))
 print()
 
 if userinput == "yes":
-  print(
-    " On the special menu today we have the Pie for $4.50 and the Burger for $7.89."
-  )
   menu = (
-    "{v} what would you like to order?   Please enter either a Pie or a Burger. "
+    "{v} what would you like to order? "  
   )
-  print(menu.format(v=name))
+  (menu.format(v=name))
 
-elif userinput == "no":
-  thankyou = ("Thank you {v} for visiting us at Fraser High School Canteen.")
-  print(thankyou.format(v=name))
+if userinput == "No":
+  print(
+    'Thank you {v} for visiting us at Fraser High School Canteen.'.format(
+      v=name))
+  #sequence 3 
+
+menuList = 'The Pie is worth $4.50 and The Burger is worth $7.89, {v} what would you like to order, either a Pie or a Burger? '
+foodResponse = input(menuList.format(v=name))
+while foodResponse.lower() != "pie" and foodResponse.lower() != "burger":
+    print('Invalid input. Please choose either a Pie or a Burger.')
+    foodResponse = input(menuList.format(v=name))
+
+finalResponse = 'Thank you {v} for ordering the delicious {meal}. We will just get this ready for you.'
+if foodResponse.lower() == "pie":
+    print(finalResponse.format(v=name, meal="Pie"))
+else:
+    print(finalResponse.format(v=name, meal="Burger"))
