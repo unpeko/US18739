@@ -68,7 +68,7 @@ else:
   
   #sequence 3 
 
-menuList = 'The Pie is worth $4.50 and The Burger is worth $7.89, {v} what would you like to order, either a Pie or a Burger? '
+menuList = 'On the special menu today the Pie is worth $4.50 and The Burger is worth $7.89, {v} what would you like to order, either a Pie or a Burger? '
 foodResponse = input(menuList.format(v=name))
 while foodResponse.lower() != "pie" and foodResponse.lower() != "burger":
     print('Invalid input. Please choose either a Pie or a Burger.')
