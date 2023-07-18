@@ -4,6 +4,7 @@
 def statement_generator(statement, decoration):
   # author: luka
   # date: Jun 20, 2023
+  # generates a border around prints
 
   sides = decoration
 
@@ -42,8 +43,8 @@ if name.isalpha():
   print()
 
 # menu yes_no (sequnce 2)
-  # author: luka
-  # date: Jun 30, 2023
+# author: luka
+# date: Jun 30, 2023
 
 greeting = "{}, would you like to see our menu? "
 
@@ -62,8 +63,8 @@ while True:
     print("Please answer with 'yes' or 'no'.")
 
 # sequence 3 menu selection
-  # author: luka
-  # date: Jul 17, 2023
+# author: luka
+# date: Jul 17, 2023
 
 menuList = "On the special menu today the Pie is worth $4.50 and The Burger is worth $7.89, {v} what would you like to order, either a Pie or a Burger? "
 foodResponse = input(menuList.format(v=name))
