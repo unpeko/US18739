@@ -4,6 +4,7 @@
 def statement_generator(statement, decoration):
   # author: luka
   # date: Jun 20, 2023
+  # version: v1
   # generates a border around prints
 
   sides = decoration
@@ -27,6 +28,7 @@ statement_generator("Welcome to Fraser's school canteen!", "-")
 
 # name checker (sequence 1)
 # author: luka
+# version: v1.3
 # date: Jun 20, 2023
 
 name = input("What is your name? ")
@@ -44,6 +46,7 @@ if name.isalpha():
 
 # menu yes_no (sequnce 2)
 # author: luka
+# version: v2.1
 # date: Jun 30, 2023
 
 greeting = "{}, would you like to see our menu? "
@@ -64,6 +67,7 @@ while True:
 
 # sequence 3 menu selection
 # author: luka
+# version: v2.3
 # date: Jul 17, 2023
 
 menuList = "On the special menu today the Pie is worth $4.50 and The Burger is worth $7.89, {v} what would you like to order, either a Pie or a Burger? "
